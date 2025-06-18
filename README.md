@@ -1,6 +1,6 @@
 # 🧠 Rubik’s Cube Solver – AI + Flask Web App
 
-![banner](https://raw.githubusercontent.com/yourusername/rubiks-cube-solver/main/screenshots/banner.png)
+![banner]([https://raw.githubusercontent.com/yourusername/rubiks-cube-solver/main/screenshots/banner.png](https://raw.githubusercontent.com/AnaghaMahajan2004/rubiks-cube-solver/refs/heads/main/screenshots/banner.png))
 
 This is an AI-powered web application that captures a real Rubik’s Cube using your camera or image upload, predicts its color configuration using a trained CNN model, computes the optimal solution using the Kociemba algorithm, and then shows a beautiful 3D animated solution step-by-step using twisty-player.
 
