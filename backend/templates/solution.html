@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rubik's Cube Solution Viewer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        padding: 30px;
+      }
+      twisty-player {
+        width: 350px;
+        height: 350px;
+        margin: 0 auto;
+      }
+      .cube-string {
+        font-family: monospace;
+        background: #fff;
+        padding: 8px 12px;
+        border-radius: 6px;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      .move-info {
+        font-size: 18px;
+        margin: 15px 0;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <!-- ✅ Correct cubing.js -->
+    <script
+      src="https://cdn.cubing.net/v0/js/cubing/twisty"
+      type="module"
+    ></script>
+  </head>
+  <body>
+    <h2>🧠 Rubik's Cube Solver</h2>
+    <div class="cube-string">{{ cube_string }}</div>
+
+    <twisty-player
+      id="player"
+      puzzle="3x3x3"
+      experimental-setup-alg="{{ scramble|safe }}"
+      experimental-setup-anchor="end"
+      background="none"
+      control-panel="none"
+    ></twisty-player>
+
+    <div class="move-info" id="move-info">
+      Click "Next" to solve the cube step-by-step.
+    </div>
+    <button id="next-button">Next</button>
+
+    <a href="/" style="display: block; margin-top: 30px">🔙 Go Back</a>
+
+    <script type="module">
+      (async () => {
+        const moves = {{ solution|tojson }};
+        const player = document.getElementById("player");
+        const moveInfo = document.getElementById("move-info");
+        const nextButton = document.getElementById("next-button");
+
+        await player.ready;
+
+        let currentStep = 0;
+        const appliedMoves = [];
+
+        nextButton.addEventListener("click", () => {
+          if (currentStep < moves.length) {
+            const move = moves[currentStep];
+            appliedMoves.push(move);
+            player.alg = appliedMoves.join(" ");
+            moveInfo.textContent = `Step ${currentStep + 1}: ${move}`;
+            currentStep++;
+            if (currentStep === moves.length) {
+              nextButton.disabled = true;
+              nextButton.textContent = "Done 🎉";
+              moveInfo.textContent = "Cube solved! 🧊";
+            }
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
