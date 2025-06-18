@@ -11,12 +11,14 @@ This is an AI-powered web application that captures a real Rubik’s Cube using 
 
 ## 🔍 What It Does
 
-- 📸 **Takes input images** of cube faces (via upload form)
-- 🧠 **CNN model** classifies color of each facelet (image classification)
-- 📦 **Generates cube string** from all six faces
-- 🧮 **Uses Kociemba algorithm** to compute the shortest solving sequence
-- 🧊 **Visualizes the cube in 3D** using [twisty-player](https://cubing.js.org)
-- ➡️ **Click “Next”** to go through each move one-by-one
+| Feature | Description |
+|--------|-------------|
+| 📸 Image Input | Takes input images of cube faces (via upload form) |
+| 🧠 Color Prediction | CNN model classifies color of each facelet |
+| 📦 Cube String Generation | Generates cube string from all six faces |
+| 🧮 Solving Algorithm | Uses Kociemba algorithm to compute the optimal solution |
+| 🧊 3D Visualization | Shows cube in 3D using [twisty-player](https://cubing.js.org) |
+| ➡️ Step-by-Step Play | Click "Next" to go through each move one-by-one |
 
 ---
 
@@ -29,16 +31,16 @@ This is an AI-powered web application that captures a real Rubik’s Cube using 
 ---
 
 ## 💡 How It Works (Simplified Flow)
-📷 Image Upload
-⬇️
-🎯 OpenCV Preprocessing
-⬇️
-🧠 CNN Color Classifier (Keras)
-⬇️
-🧩 Valid Cube String Construction
-⬇️
-🤖 Kociemba Algorithm (Python Lib)
-⬇️
+📷 Image Upload<br>
+⬇️<br>
+🎯 OpenCV Preprocessing<br>
+⬇️<br>
+🧠 CNN Color Classifier (Keras)<br>
+⬇️<br>
+🧩 Valid Cube String Construction<br>
+⬇️<br>
+🤖 Kociemba Algorithm (Python Lib)<br>
+⬇️<br>
 🧊 3D Cube + Step-by-Step Animation (cubing.js)
 
 
