@@ -24,8 +24,7 @@ This is an AI-powered web application that captures a real Rubik’s Cube using 
 
 | Uploading Faces | 3x3 Cube Solving (Step-by-step) |
 |-----------------|----------------------------------|
-| ![upload](https://raw.githubusercontent.com/AnaghaMahajan2004/rubiks-cube-solver/main/screenshots/upload.PNG)
- | ![solve](https://raw.githubusercontent.com/yourusername/rubiks-cube-solver/main/screenshots/solve.gif) |
+| ![upload](https://raw.githubusercontent.com/AnaghaMahajan2004/rubiks-cube-solver/main/screenshots/upload.PNG)| ![solve](https://raw.githubusercontent.com/AnaghaMahajan2004/rubiks-cube-solver/main/screenshots/solve.PNG) |
 
 ---
 
